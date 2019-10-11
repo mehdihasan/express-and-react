@@ -1,0 +1,36 @@
+{
+  "name": "react-and-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "_comment": "adding something to the scripts means we can trigger that from the command line.",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack",
+    "dev": "webpack-dev-server --host 0.0.0.0 --port 3000 --open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/node": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.2",
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.7"
+  },
+  "dependencies": {
+    "history": "^4.7.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.5.0",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-saga": "^0.16.2",
+    "uuid": "^3.3.3"
+  }
+}

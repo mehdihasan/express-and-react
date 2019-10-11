@@ -1,0 +1,13 @@
+version: '3'
+
+services:  
+
+  dev:
+    image: node:11
+    volumes:
+      - .:/usr/src/service ## for development, when our files change, the files in the container also need to change.
+    working_dir: /usr/src/service ## We will mount our current directory . to /usr/src/service in the container. We will also need to tell docker where our “working directory” is. Meaning — what directory did we put the code in
+    command: npm run dev
+    ports: 
+      - 3000:3000
+      - 1235:1235

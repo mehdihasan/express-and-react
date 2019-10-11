@@ -1,0 +1,11 @@
+{
+    // this babelrc file define how .jsx and ES6 should be handled
+    "presets": [
+        ["@babel/preset-env", {
+            "targets": {
+                "node": "current" // to have the newest features
+            }
+        }],
+        "@babel/preset-react"
+    ]   
+}
