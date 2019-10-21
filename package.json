@@ -7,7 +7,9 @@
     "_comment": "adding something to the scripts means we can trigger that from the command line.",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack",
-    "dev": "webpack-dev-server --host 0.0.0.0 --port 3000 --open"
+    "dev": "webpack-dev-server --host 0.0.0.0 --port 3000 --open",
+    "test-connect": "babel-node src/server/connect-db",
+    "initialize": "babel-node src/server/initialize-db"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +22,8 @@
     "babel-loader": "^8.0.2",
     "webpack": "^4.17.2",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.7"
+    "webpack-dev-server": "^3.1.7",
+    "mongodb": "^3.1.10"
   },
   "dependencies": {
     "history": "^4.7.2",
