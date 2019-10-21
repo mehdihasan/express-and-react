@@ -5,19 +5,26 @@ import { ConnectedDashboard } from "./Dashboard";
 import { Router, Route } from "react-router-dom";
 import { history } from "../store/history";
 import { ConnectedNavigation } from "../components/Navigation";
+import { ConnectTaskDetail } from "./TaskDetail"
+import { match } from "minimatch";
 
 export const Main = () => (
     <Router history={history} >
         <Provider store={store}>
             <div>
                 < ConnectedNavigation />
+                
                 {/* Dashboard goes here */}
                 <Route
                     exact
                     path = "/dashboard"
-                    render = { () => 
-                        <ConnectedDashboard />
-                    } />                
+                    render = { () => <ConnectedDashboard />} />      
+                
+                <Route
+                    exact
+                    path="/task/:id"
+                    render={({ match }) => (<ConnectTaskDetail match={match} />)}/>
+
             </div>
         </Provider>
     </Router>
